@@ -43,6 +43,9 @@
 					</a>
 				</li>
 
+
+			
+
 				
 				<li class="{{ Request::is('dashboard/contact*') ? 'mm-active' : '' }}">
 					<a href="{{ route('dashboard.contact.home') }}">
@@ -75,7 +78,15 @@
 
 
 
+				<li class="menu-label">Школа</li>
 
+				<li class="{{ Request::is('dashboard/student*') ? 'mm-active' : '' }}">
+					<a href="{{ route('dashboard.student.home') }}">
+						<div class="parent-icon text-primary"> <i class="bx bx-game"></i>
+						</div>
+						<div class="menu-title text-primary">Студенты</div>
+					</a>
+				</li>
 	
 				
 

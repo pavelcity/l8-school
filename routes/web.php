@@ -13,6 +13,7 @@ use App\Http\Controllers\AboutController as About;
 use App\Http\Controllers\Admin\AdminkaController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\StudentController;
 
 
 
@@ -56,6 +57,17 @@ Route::name('dashboard.')->prefix('dashboard/')->namespace('Admin')->middleware(
 		Route::get('{id}/edit', [AboutController::class, 'edit'])->name('edit');
 		Route::post('{id}/update', [AboutController::class, 'update'])->name('update');
 		Route::get('{id}/delete', [AboutController::class, 'delete'])->name('delete');
+	});
+
+
+	#Students
+	Route::name('student.')->prefix('student/')->group(function () {
+		Route::get('', [StudentController::class, 'index'])->name('home');
+		Route::get('create', [StudentController::class, 'create'])->name('create');
+		Route::post('store', [StudentController::class, 'store'])->name('store');
+		Route::get('{id}/edit', [StudentController::class, 'edit'])->name('edit');
+		Route::post('{id}/update', [StudentController::class, 'update'])->name('update');
+		Route::get('{id}/delete', [StudentController::class, 'delete'])->name('delete');
 	});
 
 });
