@@ -23,6 +23,7 @@
 
 @include('pages.includes.topnav')
 	@yield('content')	
+@include('pages.includes.footer')	
 
 	
 </body>

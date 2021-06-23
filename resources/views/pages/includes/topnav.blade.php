@@ -8,17 +8,13 @@
     </a>
 
     <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-      <a href="{{ route('home.page') }}" class="mr-5 text-gray-900 hover:text-indigo-700">Главная</a>
-      <a class="mr-5 hover:text-gray-900 text-indigo-700">Second Link</a>
-      <a class="mr-5 hover:text-gray-900 text-indigo-700">О нас</a>
-      <a class="mr-5 hover:text-gray-900 text-indigo-700">Контакты</a>
+      <a href="{{ route('home.page') }}" class="{{ Request::is('/') ? 'text-gray-800' : 'text-indigo-700' }} mr-5 hover:text-gray-900 ">Главная</a>
+      <a class="{{ Request::is('not') ? 'text-gray-800' : 'text-indigo-700' }} mr-5 hover:text-gray-900 ">Second Link</a>
+      <a href="{{ route('about.home') }}" class="{{ Request::is('about') ? 'text-gray-800' : 'text-indigo-700' }} mr-5 hover:text-gray-900 ">О нас</a>
+      <a href="{{ route('contact.home') }}" class="{{ Request::is('contact') ? 'text-gray-800' : 'text-indigo-700' }} mr-5 hover:text-gray-900 ">Контакты</a>
     </nav>
 		
-    {{-- <a href="#" class="mr-10 bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-0">Я студент
-    </a>
 
-    <a href="#" class="block bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-50 rounded text-base mt-0 ml-5">Я преподаватель
-    </a> --}}
 
 		<div>
 			<a href="#" class="bg-indigo-500 px-4 py-1.5 rounded text-white inlie-block uppercase text-xs hover:bg-gray-100 transition hover:text-indigo-500">я студент</a>
