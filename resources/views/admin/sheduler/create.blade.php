@@ -1,6 +1,6 @@
- 
+  
 @extends('layouts.admin')
-@section('title', 'Учителя создать')
+@section('title', 'Расписание создать')
 
 
 @section('content')
@@ -9,13 +9,13 @@
 
 	<!--breadcrumb-->
 	<div class="page-breadcrumb d-none d-md-flex align-items-center mb-3">
-		<div class="breadcrumb-title pr-3">Учителя</div>
+		<div class="breadcrumb-title pr-3">Расписание</div>
 		<div class="pl-3">
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb mb-0 p-0">
 					<li class="breadcrumb-item"><a href="{{ route('dashboard.home') }}"><i class='bx bx-home-alt text-info'></i></a>
 					</li>
-					<li class="breadcrumb-item active " aria-current="page"><a href="{{ route('dashboard.teacher.home') }}" class="text-info">Учителя</a></li>
+					<li class="breadcrumb-item active " aria-current="page"><a href="{{ route('dashboard.sheduler.home') }}" class="text-info">Расписание</a></li>
 					<li class="breadcrumb-item active" aria-current="page">Создать</li>
 				</ol>
 			</nav>
@@ -40,19 +40,19 @@
 
 
 			@if(true)
-			<form action="{{ route('dashboard.teacher.store') }}" method="post" autocomplete="off" enctype="multipart/form-data">
+			<form action="{{ route('dashboard.sheduler.store') }}" method="post" autocomplete="off" enctype="multipart/form-data">
 				@csrf
 		
 				<div class="card-title">
 					<button type="submit" class="btn btn-info m-1 px-5 py-2">Создать</button>
-					<a href="{{ route('dashboard.teacher.home') }}" class="btn btn-outline-info m-1 px-5 py-2">Назад</a>
+					<a href="{{ route('dashboard.sheduler.home') }}" class="btn btn-outline-info m-1 px-5 py-2">Назад</a>
 				</div>
 				<hr/>
 
 
 
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
-				<li class="nav-item" role="presentation"> <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">teacher</a>
+				<li class="nav-item" role="presentation"> <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">расписание</a>
 				</li>
 			</ul>
 
@@ -70,39 +70,62 @@
 					
 					
 								{{-- ### --}}
+
+							<br>
+							<div class="form-group">
+								<label for="title">Выберите преподавателя</label>
+								<select class="form-control form-control" name="teacher_id" required>
+									<option selected disabled>Выберите ...</option>
+									@foreach ($teachers as $teacher)
+											<option value="{{ $teacher->id }}">{{ $teacher->name }} &nbsp; | &nbsp; {{ $teacher->tema }}</option>
+									@endforeach
+								</select>
+								@error('teacher_id')
+									<p style="color:red;">{{ $message }}</p>
+								@enderror
+							</div>
+
+								
 					
 							<br>
 							<div class="form-group">
-								<label for="name">Имя преподавателя  </label>
-								<input class="form-control form-control-lg" id="name" name="name" type="text" placeholder="имя" value="{{ old('name') }}">
-								@error('name')
+								<label for="title">Заголовок (например консультация по уроку: тригонометрия, etc...)  </label>
+								<input class="form-control form-control-lg" id="title" name="title" type="text" placeholder="Заголовок" value="{{ old('title') }}">
+								@error('title')
 									<p style="color:red;">{{ $message }}</p>
 								@enderror
 							</div>
 
 							<br>
 							<div class="form-group">
-								<label for="tema">Предмет  </label>
-								<input class="form-control form-control-lg" id="tema" name="tema" type="text" placeholder="предмет" value="{{ old('tema') }}">
-								@error('tema')
+								<label for="day">День (дата, например: 15 июля) </label>
+								<input class="form-control form-control-lg" id="day" name="day" type="text" placeholder="День" value="{{ old('day') }}">
+								@error('day')
 									<p style="color:red;">{{ $message }}</p>
 								@enderror
 							</div>
 
 							<br>
 							<div class="form-group">
-								<label for="email">email </label>
-								<input class="form-control form-control-lg" id="email" name="email" type="text" placeholder="email" value="{{ old('email') }}">
-								@error('email')
+								<label for="time">Время </label>
+								<input class="form-control form-control-lg" id="time" name="time" type="text" placeholder="time" value="{{ old('time') }}">
+								@error('time')
 									<p style="color:red;">{{ $message }}</p>
 								@enderror
 							</div>
+ 
+					
 
 							<br>
 							<div class="form-group">
-								<label for="phone">Телефон </label>
-								<input class="form-control form-control-lg" id="phone" name="phone" type="text" placeholder="Телефон" value="{{ old('phone') }}">
-								@error('phone')
+								<label for="status">Статус консультации</label>
+								<select class="form-control form-control" name="status" required>
+									<option selected disabled>Выберите ...</option>
+									<option value="1">Открыта</option>
+									<option value="2">Одобрено</option>
+									<option value="3">Закрыто</option>
+								</select>
+								@error('status')
 									<p style="color:red;">{{ $message }}</p>
 								@enderror
 							</div>
@@ -110,40 +133,12 @@
 
 							<br>
 							<div class="form-group">
-								<label for="password">Пароль </label>
-								<input class="form-control form-control-lg" id="password" name="password" type="text" placeholder="Пароль" value="{{ old('password') }}">
-								@error('password')
+								<label for="descr">Текст (описание консультации)</label>
+								<textarea id="descr" name="descr" class="form-control" rows="10" cols="3">{{ old('descr') }}</textarea>
+								@error('descr')
 									<p style="color:red;">{{ $message }}</p>
 								@enderror
 							</div>
-
-
-
-
-
-							@if(false)
-							<br>
-								<label for="short">Аватар</label>
-								<div class="mt-0">
-									<img src="{{ asset('uploads/not_image.jpg') }}" width="400" alt="" id="showPic">
-								</div>
-
-								<br>
-								@error('pic')
-									<p style="color:red; font-size:12px;">{{ $message }}</p>
-								@enderror
-								<div class="input-group mb-1 mt-0">
-									<div class="input-group-prepend">	<span class="input-group-text" id="pic">Картинка</span>
-									</div>
-									<div class="custom-file">
-										<input type="file" name="avatar" class="custom-file-input " id="avatar" aria-describedby="avatar">
-										<label class="custom-file-label" for="avatar">Выберите файл</label>
-									</div>
-									
-								</div>
-								<br>
-								<br>
-								@endif
 
 
 					
@@ -173,7 +168,7 @@
 
 			<hr>
 			<button type="submit" class="btn btn-info m-1 px-5 py-2">Создать</button>
-			<a href="{{ route('dashboard.teacher.home') }}" class="btn btn-outline-info m-1 px-5 py-2">Назад</a>
+			<a href="{{ route('dashboard.sheduler.home') }}" class="btn btn-outline-info m-1 px-5 py-2">Назад</a>
 
 		</form>
 		@endif

@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\StudentController;
 use App\Http\Controllers\Admin\TeacherController;
+use App\Http\Controllers\Admin\ShedulerController;
 
 
 
@@ -94,6 +95,16 @@ Route::name('dashboard.')->prefix('dashboard/')->namespace('Admin')->middleware(
 		Route::get('{id}/edit', [TeacherController::class, 'edit'])->name('edit');
 		Route::post('{id}/update', [TeacherController::class, 'update'])->name('update');
 		Route::get('{id}/delete', [TeacherController::class, 'delete'])->name('delete');
+	});
+
+	#Расписание
+	Route::name('sheduler.')->prefix('sheduler/')->group(function () {
+		Route::get('', [ShedulerController::class, 'index'])->name('home');
+		Route::get('create', [ShedulerController::class, 'create'])->name('create');
+		Route::post('store', [ShedulerController::class, 'store'])->name('store');
+		Route::get('{id}/edit', [ShedulerController::class, 'edit'])->name('edit');
+		Route::post('{id}/update', [ShedulerController::class, 'update'])->name('update');
+		Route::get('{id}/delete', [ShedulerController::class, 'delete'])->name('delete');
 	});
 
 });

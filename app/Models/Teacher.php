@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
+use App\Models\Sheduler;
 
 class Teacher extends Model
 {
@@ -19,7 +20,7 @@ class Teacher extends Model
 				]
 			];
 		} 
-
+  
 
 		protected $fillable = [
 			'name',
@@ -30,4 +31,14 @@ class Teacher extends Model
 			'tema',
 			'password',
 		];
+
+
+
+
+		public function shedulers () {
+			return $this->hasMany(Sheduler::class);
+		}
+
+
+
 }

@@ -50,7 +50,61 @@
 
 
 
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-4 mx-auto">
 
+
+		
+    <div class="flex flex-wrap -m-4">
+
+
+			@forelse($teachers as $teacher)
+			<div class="p-4 lg:w-1/3">
+        <div class="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+          <h2 class="tracking-widest text-xs title-font font-medium text-blue-600 mb-1">
+						{{ $teacher->tema ?? '' }}
+					</h2>
+          <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
+						{{ $teacher->name ?? '' }}
+					</h1>
+          <p class="leading-relaxed mb-3">
+						{{ $teacher->phone ?? '' }} &nbsp; | &nbsp; {{ $teacher->email ?? '' }} <br>
+					</p>
+
+					<div class="mb-4 mt-7 text-xl border-b border-t border-indigo-600 pb-5 pt-5">Доступно консультаций  <span class="bg-indigo-500 py-1.5 px-2.5 text-white rounded">
+						{{ count($teacher->shedulers) ?? '' }}
+					</span></div>
+          
+					<a href="{{ route('teachers.detail', $teacher->slug) }}" class="text-indigo-500 hover:text-gray-500 inline-flex items-center">
+						Перейти
+            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+			@empty
+				<p>нет данных </p>
+			@endforelse
+
+
+
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+@if(false)
 <section class="text-gray-600 body-font">
   <div class="container px-5 py-4 mx-auto">
     <div class="flex flex-wrap -m-4">
@@ -79,7 +133,7 @@
     </div>
   </div>
 </section>
-
+@endif
 
 
 

@@ -60,7 +60,7 @@
 
 
 
-
+				@if(false)
 				<li class="#">
 					<a href="#">
 						<div class="parent-icon text-primary"> <i class="bx bx-cog"></i>
@@ -68,6 +68,7 @@
 						<div class="menu-title text-primary">Профиль</div>
 					</a>
 				</li>
+				@endif
 
 
 
@@ -84,11 +85,20 @@
 					<a href="{{ route('dashboard.teacher.home') }}">
 						<div class="parent-icon text-primary"> <i class="bx bx-chair"></i>
 						</div>
-						<div class="menu-title text-primary">Учителия</div>
+						<div class="menu-title text-primary">Учителя</div>
+					</a>
+				</li>
+
+				<li class="{{ Request::is('dashboard/sheduler*') ? 'mm-active' : '' }}">
+					<a href="{{ route('dashboard.sheduler.home') }}">
+						<div class="parent-icon text-primary"> <i class="bx bx-calendar"></i>
+						</div>
+						<div class="menu-title text-primary">Расписание </div>
 					</a>
 				</li>
 	
 
+				<li class="menu-label"></li>
 				<li class="{{ Request::is('dashboard/student*') ? 'mm-active' : '' }}">
 					<a href="{{ route('dashboard.student.home') }}">
 						<div class="parent-icon text-primary"> <i class="bx bx-game"></i>

@@ -103,10 +103,11 @@
 <br>
 
 
+
 <section class="text-gray-600 body-font relative ">
   <div class="absolute inset-0 bg-gray-300">
 		
-		{!! $contact->map ?? '<script type="text/javascript" charset="utf-8" rel="prefetch" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4a7371e7e1fe37f2e4a5d356211b9b46ed0d9ac8d30e679ae022e22795b0eee4&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>' !!}
+		{!! $contact->map ?? '<script type="text/javascript" charset="utf-8" rel="prefetch" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaeb9e8527de1c059c7092246f452070094dc78ae76b9eed2b1494b4797b27668&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>' !!}
 
 
 

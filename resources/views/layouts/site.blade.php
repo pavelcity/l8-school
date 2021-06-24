@@ -15,7 +15,7 @@
 	<title>@yield('title')</title>
 
 
-	<link rel="stylesheet" href="{{ asset('css/app.css?v=2') }}">
+	<link rel="stylesheet" href="{{ asset('css/app.css?v=3') }}">
 	
 </head>
 <body>
@@ -25,6 +25,9 @@
 	@yield('content')	
 @include('pages.includes.footer')	
 
+
+
+<script src="{{ asset('js/myjs.js?v=1') }}"> </script>
 	
 </body>
 </html>

@@ -15,7 +15,16 @@ class CreateShedulersTable extends Migration
     {
         Schema::create('shedulers', function (Blueprint $table) {
             $table->id();
+						$table->unsignedBigInteger('teacher_id')->default('1');
+						$table->string('title')->nullable();
+						$table->string('slug')->nullable();
+						$table->string('day')->nullable();
+						$table->string('time')->nullable();
+						$table->text('descr')->nullable();
+						$table->string('status')->default('closed');
             $table->timestamps();
+
+						$table->foreign('teacher_id')->references('id')->on('teachers');
         });
     }
 

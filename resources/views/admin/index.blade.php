@@ -32,7 +32,7 @@
 
 
 
-	
+	@if(false)
 	<div class="col-12 col-lg-4">
 		<a href="#" class="card radius-5 bg-primary">
 			<div class="card-body">
@@ -45,6 +45,7 @@
 			</div>
 		</a>
 	</div> 
+	@endif
 
 
 
@@ -96,6 +97,19 @@
 					<div>
 						<p class="mb-0 font-weight-bold text-info">настроить</p>
 						<h3 class="mb-0 text-info">Учителя</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div> 
+
+	<div class="col-12 col-lg-4">
+		<a href="{{ route('dashboard.sheduler.home') }}" class="card radius-5">
+			<div class="card-body">
+				<div class="d-flex mb-2">
+					<div>
+						<p class="mb-0 font-weight-bold text-info">для преподавателей</p>
+						<h3 class="mb-0 text-info">Расписание</h3>
 					</div>
 				</div>
 			</div>

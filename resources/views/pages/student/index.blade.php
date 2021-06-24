@@ -7,7 +7,7 @@
 
 
 
-<div class="container mx-auto mt-6">
+<div class="container mx-auto mt-6 px-5">
 	<h1 class="text-4xl font-semibold text-indigo-500 mb-10">Студенты</h1>
 
 
