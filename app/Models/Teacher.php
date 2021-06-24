@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 
-class Student extends Model
+class Teacher extends Model
 {
-    use HasFactory;
+    use HasFactory; 
 		use Sluggable;
 
 		public function sluggable(): array
@@ -18,17 +18,16 @@ class Student extends Model
 					'source' => 'name'
 				]
 			];
-		}  
+		} 
 
 
 		protected $fillable = [
 			'name',
 			'slug',
-			'email',
+			'sheduler_id',
 			'phone',
+			'email',
+			'tema',
 			'password',
-			'avatar',
-			'order'
 		];
-
 }

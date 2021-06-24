@@ -52,13 +52,41 @@ class StudentController extends Controller
 	}
 
 
-
+ 
 
 	#edit
 	public function edit ($id) {
 		$student = Student::find($id);
 		return view ('admin.student.edit', compact('student'));
 	}
+
+
+
+
+
+
+
+	#update
+	public function update (Request $request, $id) {
+		$this->validate($request, [
+			// 'name' => 'required',
+		]);
+
+
+		$student = Student::find($id);
+
+		$student->update([
+			'name' => $request->name,
+			'email' => $request->email,
+			'phone' => $request->phone,
+		]);
+
+		
+		return redirect()->route('dashboard.student.home');
+	}
+
+
+
 
 
 

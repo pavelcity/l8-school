@@ -80,6 +80,15 @@
 
 				<li class="menu-label">Школа</li>
 
+				<li class="{{ Request::is('dashboard/teacher*') ? 'mm-active' : '' }}">
+					<a href="{{ route('dashboard.teacher.home') }}">
+						<div class="parent-icon text-primary"> <i class="bx bx-chair"></i>
+						</div>
+						<div class="menu-title text-primary">Учителия</div>
+					</a>
+				</li>
+	
+
 				<li class="{{ Request::is('dashboard/student*') ? 'mm-active' : '' }}">
 					<a href="{{ route('dashboard.student.home') }}">
 						<div class="parent-icon text-primary"> <i class="bx bx-game"></i>

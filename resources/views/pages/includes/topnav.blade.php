@@ -9,7 +9,11 @@
 
     <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
       <a href="{{ route('home.page') }}" class="{{ Request::is('/') ? 'text-gray-800' : 'text-indigo-700' }} mr-5 hover:text-gray-900 ">Главная</a>
-      <a class="{{ Request::is('not') ? 'text-gray-800' : 'text-indigo-700' }} mr-5 hover:text-gray-900 ">Second Link</a>
+
+      <a href="{{ route('teachers.home') }}" class="{{ Request::is('teachers*') ? 'text-gray-800' : 'text-indigo-700' }} mr-5 hover:text-gray-900 ">Учителя</a>
+
+      <a href="{{ route('student.home') }}" class="{{ Request::is('students') ? 'text-gray-800' : 'text-indigo-700' }} mr-5 hover:text-gray-900 ">Студенты</a>
+
       <a href="{{ route('about.home') }}" class="{{ Request::is('about') ? 'text-gray-800' : 'text-indigo-700' }} mr-5 hover:text-gray-900 ">О нас</a>
       <a href="{{ route('contact.home') }}" class="{{ Request::is('contact') ? 'text-gray-800' : 'text-indigo-700' }} mr-5 hover:text-gray-900 ">Контакты</a>
     </nav>

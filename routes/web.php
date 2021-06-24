@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ContactController as Contact;
 use App\Http\Controllers\AboutController as About;
+use App\Http\Controllers\StudentsController as Students;
+use App\Http\Controllers\TeacherController as Teacher;
 
 
 # роуты админки
@@ -14,6 +16,7 @@ use App\Http\Controllers\Admin\AdminkaController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\StudentController;
+use App\Http\Controllers\Admin\TeacherController;
 
 
 
@@ -28,6 +31,18 @@ Route::get('contact', [Contact::class, 'index'])->name('contact.home');
 
 #about page
 Route::get('about', [About::class, 'index'])->name('about.home');
+
+#students page
+Route::get('students', [Students::class, 'index'])->name('student.home');
+
+
+
+
+#teacher page
+Route::name('teachers.')->prefix('teachers/')->group(function(){
+	Route::get('', [Teacher::class, 'index'])->name('home');
+	Route::get('{slug}', [Teacher::class, 'detail'])->name('detail');
+});
 
 
 
@@ -68,6 +83,17 @@ Route::name('dashboard.')->prefix('dashboard/')->namespace('Admin')->middleware(
 		Route::get('{id}/edit', [StudentController::class, 'edit'])->name('edit');
 		Route::post('{id}/update', [StudentController::class, 'update'])->name('update');
 		Route::get('{id}/delete', [StudentController::class, 'delete'])->name('delete');
+	});
+
+
+	#Teachers
+	Route::name('teacher.')->prefix('teacher/')->group(function () {
+		Route::get('', [TeacherController::class, 'index'])->name('home');
+		Route::get('create', [TeacherController::class, 'create'])->name('create');
+		Route::post('store', [TeacherController::class, 'store'])->name('store');
+		Route::get('{id}/edit', [TeacherController::class, 'edit'])->name('edit');
+		Route::post('{id}/update', [TeacherController::class, 'update'])->name('update');
+		Route::get('{id}/delete', [TeacherController::class, 'delete'])->name('delete');
 	});
 
 });

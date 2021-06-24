@@ -90,6 +90,20 @@
  
 
 	<div class="col-12 col-lg-4">
+		<a href="{{ route('dashboard.teacher.home') }}" class="card radius-5">
+			<div class="card-body">
+				<div class="d-flex mb-2">
+					<div>
+						<p class="mb-0 font-weight-bold text-info">настроить</p>
+						<h3 class="mb-0 text-info">Учителя</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div> 
+
+ 
+	<div class="col-12 col-lg-4">
 		<a href="{{ route('dashboard.student.home') }}" class="card radius-5">
 			<div class="card-body">
 				<div class="d-flex mb-2">

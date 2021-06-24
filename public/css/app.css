@@ -11568,6 +11568,18 @@ select {
   list-style-position: outside;
 }
 
+.list-0 {
+  list-style-type: hover;
+}
+
+.list-1 {
+  list-style-type: focus;
+}
+
+.list-2 {
+  list-style-type: active;
+}
+
 .list-none {
   list-style-type: none;
 }
@@ -11578,6 +11590,14 @@ select {
 
 .list-decimal {
   list-style-type: decimal;
+}
+
+.list-square {
+  list-style-type: square;
+}
+
+.list-roman {
+  list-style-type: upper-roman;
 }
 
 .appearance-none {
@@ -44242,6 +44262,18 @@ select {
     list-style-position: outside;
   }
 
+  .sm\:list-0 {
+    list-style-type: hover;
+  }
+
+  .sm\:list-1 {
+    list-style-type: focus;
+  }
+
+  .sm\:list-2 {
+    list-style-type: active;
+  }
+
   .sm\:list-none {
     list-style-type: none;
   }
@@ -44252,6 +44284,14 @@ select {
 
   .sm\:list-decimal {
     list-style-type: decimal;
+  }
+
+  .sm\:list-square {
+    list-style-type: square;
+  }
+
+  .sm\:list-roman {
+    list-style-type: upper-roman;
   }
 
   .sm\:appearance-none {
@@ -76844,6 +76884,18 @@ select {
     list-style-position: outside;
   }
 
+  .md\:list-0 {
+    list-style-type: hover;
+  }
+
+  .md\:list-1 {
+    list-style-type: focus;
+  }
+
+  .md\:list-2 {
+    list-style-type: active;
+  }
+
   .md\:list-none {
     list-style-type: none;
   }
@@ -76854,6 +76906,14 @@ select {
 
   .md\:list-decimal {
     list-style-type: decimal;
+  }
+
+  .md\:list-square {
+    list-style-type: square;
+  }
+
+  .md\:list-roman {
+    list-style-type: upper-roman;
   }
 
   .md\:appearance-none {
@@ -109446,6 +109506,18 @@ select {
     list-style-position: outside;
   }
 
+  .lg\:list-0 {
+    list-style-type: hover;
+  }
+
+  .lg\:list-1 {
+    list-style-type: focus;
+  }
+
+  .lg\:list-2 {
+    list-style-type: active;
+  }
+
   .lg\:list-none {
     list-style-type: none;
   }
@@ -109456,6 +109528,14 @@ select {
 
   .lg\:list-decimal {
     list-style-type: decimal;
+  }
+
+  .lg\:list-square {
+    list-style-type: square;
+  }
+
+  .lg\:list-roman {
+    list-style-type: upper-roman;
   }
 
   .lg\:appearance-none {
@@ -142048,6 +142128,18 @@ select {
     list-style-position: outside;
   }
 
+  .xl\:list-0 {
+    list-style-type: hover;
+  }
+
+  .xl\:list-1 {
+    list-style-type: focus;
+  }
+
+  .xl\:list-2 {
+    list-style-type: active;
+  }
+
   .xl\:list-none {
     list-style-type: none;
   }
@@ -142058,6 +142150,14 @@ select {
 
   .xl\:list-decimal {
     list-style-type: decimal;
+  }
+
+  .xl\:list-square {
+    list-style-type: square;
+  }
+
+  .xl\:list-roman {
+    list-style-type: upper-roman;
   }
 
   .xl\:appearance-none {
@@ -174650,6 +174750,18 @@ select {
     list-style-position: outside;
   }
 
+  .\32xl\:list-0 {
+    list-style-type: hover;
+  }
+
+  .\32xl\:list-1 {
+    list-style-type: focus;
+  }
+
+  .\32xl\:list-2 {
+    list-style-type: active;
+  }
+
   .\32xl\:list-none {
     list-style-type: none;
   }
@@ -174660,6 +174772,14 @@ select {
 
   .\32xl\:list-decimal {
     list-style-type: decimal;
+  }
+
+  .\32xl\:list-square {
+    list-style-type: square;
+  }
+
+  .\32xl\:list-roman {
+    list-style-type: upper-roman;
   }
 
   .\32xl\:appearance-none {

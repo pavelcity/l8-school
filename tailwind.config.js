@@ -15,7 +15,16 @@ module.exports = {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
 						padding: ['hover', 'focus', 'active'],
+						listStyleType: ['hover', 'focus', 'active'],
+						tableLayout: ['hover', 'focus'],
         },
+				listStyleType: {
+					none: 'none',
+					disc: 'disc',
+					decimal: 'decimal',
+					square: 'square',
+					roman: 'upper-roman',
+				}
 				
     },
 
