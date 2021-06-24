@@ -87,13 +87,13 @@
         </nav>
       </div>
       <div class="lg:w-1/6 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Админки</h2>
         <nav class="list-none mb-10">
           <li>
-            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+            <a href="{{ route('dashboard.home') }}" class="text-red-600 hover:text-gray-800">Суперадмин</a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+            <a href="{{ route('dashteacher.home') }}" class="text-blue-600 hover:text-gray-800">ЛК Преподавателя</a>
           </li>
           <li>
             <a class="text-gray-600 hover:text-gray-800">Third Link</a>
