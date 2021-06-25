@@ -136,7 +136,7 @@
   </div>
   <div class="bg-gray-100">
     <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-      <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 it-school —
+      <p class="text-gray-500 text-sm text-center sm:text-left">© 2021 it-school —
         <a href="{{ route('home.page') }}" class="text-gray-600 ml-1" rel="noopener noreferrer">it-school</a>
       </p>
       <span class="sm:ml-auto sm:mt-0 mt-2 sm:w-auto w-full sm:text-left text-center text-gray-500 text-sm">Учись. Развивайся. Улучшайся</span>

@@ -27,7 +27,7 @@ use App\Http\Controllers\Lkteacher\ShedulerController as LkTeacherSheduler;
 
 
 
-
+ 
 
 
 Route::get('', [HomePageController::class, 'index'])->name('home.page');
@@ -41,9 +41,6 @@ Route::get('about', [About::class, 'index'])->name('about.home');
 
 #students page
 Route::get('students', [Students::class, 'index'])->name('student.home');
-
-
-
 
 #teacher page
 Route::name('teachers.')->prefix('teachers/')->group(function(){

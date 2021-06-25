@@ -1,7 +1,7 @@
-@extends('layouts.admin')
+@extends('layouts.teacher')
 @section('title', 'Учителя Расписание')
 
-
+ 
 @section('content')
 
 
@@ -28,7 +28,7 @@
 
 
 
-
+ 
 
 <div class="card radius-5">
 	<div class="card-body">
@@ -89,8 +89,8 @@
 
 						<td>
 							<div class="btn-group m-1" role="group" aria-label="Basic example">
-								<a href="{{ route('dashboard.sheduler.edit', $item->id) }}" class="btn btn-twitter btn-sm">Редактировать</a>
-								<a href="{{ route('dashboard.sheduler.delete', $item->id) }}" onclick="return confirm('удалить?')" class="btn btn-danger btn-sm">Удалить</a>
+								<a href="{{ route('dashteacher.teachersheduler.edit', $item->id) }}" class="btn btn-twitter btn-sm">Редактировать</a>
+								<a href="{{ route('dashteacher.teachersheduler.delete', $item->id) }}" onclick="return confirm('удалить?')" class="btn btn-danger btn-sm">Удалить</a>
 							</div>
 						</td>
 
