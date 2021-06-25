@@ -96,10 +96,7 @@
             <a href="{{ route('dashteacher.home') }}" class="text-blue-600 hover:text-gray-800">ЛК Преподавателя</a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+            <a href="{{ route('dashstudent.home') }}" class="text-green-600 hover:text-gray-800">ЛК Студента</a>
           </li>
         </nav>
       </div>

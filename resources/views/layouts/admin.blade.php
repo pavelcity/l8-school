@@ -128,16 +128,16 @@
 
 
 	<!-- Vector map JavaScript -->
-	{{-- <script src="	{{ asset('adminka/assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js') }}"></script> --}}
-	{{-- <script src="	{{ asset('adminka/assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js') }}"></script> --}}
-	{{-- <script src="	{{ asset('adminka/assets/plugins/vectormap/jquery-jvectormap-in-mill.js') }}"></script> --}}
-	{{-- <script src="	{{ asset('adminka/assets/plugins/vectormap/jquery-jvectormap-us-aea-en.js') }}"></script> --}}
-	{{-- <script src="	{{ asset('adminka/assets/plugins/vectormap/jquery-jvectormap-uk-mill-en.js') }}"></script> --}}
-	{{-- <script src="	{{ asset('adminka/assets/plugins/vectormap/jquery-jvectormap-au-mill.js') }}"></script> --}}
-	{{-- <script src="	{{ asset('adminka/assets/plugins/apexcharts-bundle/js/apexcharts.min.js') }}"></script> --}}
-	{{--  <script src="	{{ asset('adminka/assets/js/index.js') }}"></script>  --}}
+	{{-- <script src="	{{ asset('adminka/assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js') }}"></script>
+	<script src="	{{ asset('adminka/assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
+	<script src="	{{ asset('adminka/assets/plugins/vectormap/jquery-jvectormap-in-mill.js') }}"></script>
+	<script src="	{{ asset('adminka/assets/plugins/vectormap/jquery-jvectormap-us-aea-en.js') }}"></script>
+	<script src="	{{ asset('adminka/assets/plugins/vectormap/jquery-jvectormap-uk-mill-en.js') }}"></script>
+	<script src="	{{ asset('adminka/assets/plugins/vectormap/jquery-jvectormap-au-mill.js') }}"></script>
+	<script src="	{{ asset('adminka/assets/plugins/apexcharts-bundle/js/apexcharts.min.js') }}"></script> --}}
+	 {{-- <script src="	{{ asset('adminka/assets/js/index.js') }}"></script>  --}}
 	<!-- App JS -->
-	{{--  <script src="	{{ asset('adminka/assets/js/app.js') }}"></script>  --}}
+	 <script src="	{{ asset('adminka/assets/js/app.js') }}"></script> 
 
 	{{-- <script>
 		new PerfectScrollbar('.dashboard-social-list');

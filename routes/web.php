@@ -26,6 +26,10 @@ use App\Http\Controllers\Lkteacher\LkteacherController;
 use App\Http\Controllers\Lkteacher\ShedulerController as LkTeacherSheduler;
 
 
+#роуты админки студентов
+use App\Http\Controllers\Lkstudent\LkstudentController;
+
+
 
  
 
@@ -116,10 +120,9 @@ Route::name('dashboard.')->prefix('dashboard/')->namespace('Admin')->middleware(
 
 
 #админка преподавателей
-Route::name('dashteacher.')->prefix('dashteacher/')->namespace('Lkteacher')->group(function(){
+Route::name('dashteacher.')->prefix('dashteacher/')->namespace('Lkteacher')->middleware('auth')->group(function(){
 	Route::get('', [LkteacherController::class, 'index'])->name('home');
 
-	
 	#Расписание
 	Route::name('teachersheduler.')->prefix('teachersheduler/')->group(function () {
 		Route::get('', [LkTeacherSheduler::class, 'index'])->name('home');
@@ -130,7 +133,15 @@ Route::name('dashteacher.')->prefix('dashteacher/')->namespace('Lkteacher')->gro
 		Route::get('{id}/delete', [LkTeacherSheduler::class, 'delete'])->name('delete');
 	});
 
+});
 
+
+
+
+
+#админка студентов
+Route::name('dashstudent.')->prefix('dashstudent/')->namespace('Lkstudent')->middleware('auth')->group(function(){
+	Route::get('', [LkstudentController::class, 'index'])->name('home');
 });
 
 

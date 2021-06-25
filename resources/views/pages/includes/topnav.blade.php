@@ -21,7 +21,7 @@
  
 
 		<div class="mt-5 sm:mt-0">
-			<a href="#" class="bg-indigo-500 px-4 py-1.5 rounded text-white inlie-block uppercase text-xs hover:bg-gray-100 transition hover:text-indigo-500">я студент</a>
+			<a href="{{ route('dashstudent.home') }}" class="bg-indigo-500 px-4 py-1.5 rounded text-white inlie-block uppercase text-xs hover:bg-gray-100 transition hover:text-indigo-500">я студент</a>
 			<a href="{{ route('dashteacher.home') }}" class="bg-indigo-500 px-4 py-1.5 rounded text-white inlie-block uppercase text-xs hover:bg-gray-100 transition hover:text-indigo-500">я преподаватель</a>
 		</div>
 

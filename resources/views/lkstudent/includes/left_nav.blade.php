@@ -25,23 +25,13 @@
 
 
 				<li class="{{ Request::is('dashboard') ? 'mm-active' : '' }}">
-					<a href="{{ route('dashteacher.home') }}">
+					<a href="{{ route('dashstudent.home') }}">
 						<div class="parent-icon text-primary"><i class="bx bx-checkbox-square"></i>
 						</div>
 						<div class="menu-title text-primary">Главная</div>
 					</a>
 				</li>
 
-
-
- 
-				<li class="{{ Request::is('dashteacher/teachersheduler*') ? 'mm-active' : '' }}">
-					<a href="{{ route('dashteacher.teachersheduler.home') }}">
-						<div class="parent-icon text-primary"> <i class="bx bx-calendar"></i>
-						</div>
-						<div class="menu-title text-primary">Расписание</div>
-					</a>
-				</li>
 
 
 			

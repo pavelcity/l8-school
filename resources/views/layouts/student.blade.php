@@ -56,8 +56,8 @@
 	<!-- wrapper -->
 	<div class="wrapper">
 
-		@include('student.includes.left_nav')
-		@include('student.includes.top_header')
+		@include('lkstudent.includes.left_nav')
+		@include('lkstudent.includes.top_header')
 
 		
 
@@ -137,7 +137,7 @@
 	{{-- <script src="	{{ asset('adminka/assets/plugins/apexcharts-bundle/js/apexcharts.min.js') }}"></script> --}}
 	{{--  <script src="	{{ asset('adminka/assets/js/index.js') }}"></script>  --}}
 	<!-- App JS -->
-	{{--  <script src="	{{ asset('adminka/assets/js/app.js') }}"></script>  --}}
+	 <script src="	{{ asset('adminka/assets/js/app.js') }}"></script> 
 
 	{{-- <script>
 		new PerfectScrollbar('.dashboard-social-list');

@@ -137,7 +137,7 @@
 	{{-- <script src="	{{ asset('adminka/assets/plugins/apexcharts-bundle/js/apexcharts.min.js') }}"></script> --}}
 	{{--  <script src="	{{ asset('adminka/assets/js/index.js') }}"></script>  --}}
 	<!-- App JS -->
-	{{--  <script src="	{{ asset('adminka/assets/js/app.js') }}"></script>  --}}
+	 <script src="	{{ asset('adminka/assets/js/app.js') }}"></script> 
 
 	{{-- <script>
 		new PerfectScrollbar('.dashboard-social-list');
